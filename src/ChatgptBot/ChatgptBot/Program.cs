@@ -4,10 +4,9 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        var apiKey = "YOUR_API_KEY_HERE";   // // Replace with your ChatGPT API key
-        var client = new ChatGPTClient(apiKey);
-            
-        Console.WriteLine("Welcome to the ChatGPT bot! Type 'exit' to quit.");
+        var client = new ChatGptClient("YOUR_API_KEY_HERE");    // Replace with your ChatGPT API key
+
+        Console.WriteLine("Welcome to the ChatBot!!! anytime type 'exit' to quit.");
         while (true)
         {
             Console.ForegroundColor = ConsoleColor.Green;
@@ -21,7 +20,7 @@ public class Program
             var response = client.SendMessage(input);
                 
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.Write("Chatbot: ");
+            Console.Write("Bot: ");
             Console.ResetColor();
             Console.WriteLine(response);
         }
